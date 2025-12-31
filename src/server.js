@@ -10,7 +10,13 @@ const { BlobServiceClient } = require('@azure/storage-blob');
 const { CosmosClient } = require('@azure/cosmos');
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'https://snapflow-u-hjgmgvaue5f0ayck.spaincentral-01.azurewebsites.net/'
+  ],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(express.json());
 const upload = multer();
 
