@@ -10,7 +10,7 @@ const { v4: uuid } = require('uuid');
 
 
 const app = express();
-const cors = require('cors');
+
 
 app.use(cors({
   origin: 'https://snapflow-u-hjgmgvaue5f0ayck.spaincentral-01.azurewebsites.net',
