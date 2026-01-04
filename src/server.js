@@ -13,7 +13,7 @@ const app = express();
 
 
 app.use(cors({
-  origin: 'https://snapflow-u-hjgmgvaue5f0ayck.spaincentral-01.azurewebsites.net',
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
